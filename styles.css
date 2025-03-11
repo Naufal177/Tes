@@ -1,0 +1,113 @@
+/* Gaya dasar dan animasi latar belakang */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    animation: backgroundAnimation 10s ease infinite;
+    color: #fff;
+  }
+  
+  @keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+    50% { background: linear-gradient(135deg, #2c5364, #203a43, #0f2027); }
+    100% { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+  }
+  
+  .container {
+    margin-top: 50px;
+    padding: 20px;
+  }
+  
+  /* Animasi untuk judul */
+  h1 {
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Gaya dan animasi untuk lentera */
+  .lantern {
+    width: 200px;
+    margin-top: 20px;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Gaya untuk input dan tombol */
+  .input-group {
+    margin-top: 30px;
+  }
+  
+  #nameInput {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  #greetBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #greetBtn:hover {
+    background-color: #e67e22;
+  }
+  
+  #greeting {
+    margin-top: 20px;
+    font-size: 1.2em;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Media queries untuk tampilan di perangkat mobile */
+  @media (max-width: 600px) {
+    .container {
+      margin-top: 20px;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .lantern {
+      width: 150px;
+    }
+    #nameInput {
+      width: 150px;
+      font-size: 0.9em;
+    }
+    #greetBtn {
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+    #countdown {
+      font-size: 1em;
+    }
+    #greeting {
+      font-size: 1em;
+    }
+  }
