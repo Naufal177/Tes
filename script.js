@@ -13,7 +13,7 @@ function getIftarTime() {
   if (now.getTime() > iftarTime.getTime()) {
     iftarTime.setDate(iftarTime.getDate() + 1);
   }
-  return iftarTime;
+  return iftarTime; 04, 00, 0)
 }
 
 const countdownEl = document.getElementById('countdown');
