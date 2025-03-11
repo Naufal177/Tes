@@ -1,113 +1,132 @@
-/* Gaya dasar dan animasi latar belakang */
+/* Mengatur latar belakang bertema Ramadan untuk semua halaman */
 body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    animation: backgroundAnimation 10s ease infinite;
-    color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url('ramadan-latar.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+  color: white;
+}
+
+/* Efek transparan pada container agar teks lebih terbaca */
+.container {
+  background: rgba(0, 0, 0, 0.7); /* Transparansi hitam */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  max-width: 400px;
+  margin: auto;
+}
+
+img{
+  width: 230px;
+  height: 230px;
+}
+
+/* Animasi teks berkilau */
+.shine-text {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffd700, #ffffff, #ffd700);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Animasi fade-in untuk teks ucapan */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  @keyframes backgroundAnimation {
-    0% { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-    50% { background: linear-gradient(135deg, #2c5364, #203a43, #0f2027); }
-    100% { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .container {
-    margin-top: 50px;
-    padding: 20px;
-  }
-  
-  /* Animasi untuk judul */
-  h1 {
-    font-size: 3em;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Gaya dan animasi untuk lentera */
-  .lantern {
-    width: 200px;
-    margin-top: 20px;
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-  }
-  
-  /* Gaya untuk input dan tombol */
-  .input-group {
-    margin-top: 30px;
-  }
-  
-  #nameInput {
-    padding: 10px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    width: 200px;
-    cursor: pointer;
-  }
-  
-  #greetBtn {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    background-color: #f39c12;
-    color: #fff;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #greetBtn:hover {
-    background-color: #e67e22;
-  }
-  
-  #greeting {
-    margin-top: 20px;
-    font-size: 1.2em;
-    animation: slideIn 1s ease-in-out;
-  }
-  
-  @keyframes slideIn {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-  
-  /* Media queries untuk tampilan di perangkat mobile */
-  @media (max-width: 600px) {
-    .container {
-      margin-top: 20px;
-      padding: 10px;
-    }
-    h1 {
-      font-size: 2em;
-    }
-    .lantern {
-      width: 150px;
-    }
-    #nameInput {
-      width: 150px;
-      font-size: 0.9em;
-    }
-    #greetBtn {
-      padding: 8px 16px;
-      font-size: 0.9em;
-    }
-    #countdown {
-      font-size: 1em;
-    }
-    #greeting {
-      font-size: 1em;
-    }
-  }
+}
+
+/* Animasi lentera bergerak naik turun */
+.animate-lantern {
+  animation: floatLantern 4s ease-in-out infinite;
+}
+
+@keyframes floatLantern {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Pengaturan input dan tombol */
+.input-group {
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 80%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Desain tombol */
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Warna tombol utama */
+#greetBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+#greetBtn:hover {
+  background-color: #218838;
+}
+
+/* Tombol menuju Idul Fitri */
+#eidBtn {
+  background-color: #007bff;
+  color: white;
+}
+
+#eidBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Tombol kembali ke Ramadan */
+#backBtn {
+  background-color: #ffc107;
+  color: black;
+}
+
+#backBtn:hover {
+  background-color: #e0a800;
+}
+
+/* Efek tambahan untuk teks ucapan */
+#greeting {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
