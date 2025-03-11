@@ -9,7 +9,7 @@ function getIftarTime() {
 
     // Jika waktu saat ini sudah melewati pukul 18:05, set waktu buka puasa ke hari berikutnya
     if (now.getTime() > iftarTime.getTime()) {
-        iftarTime.setDate(iftarTime.getDate() + 1);
+        iftarTime.setDate(iftarTime.getDate() + 0);
     }
     return iftarTime;
 }
