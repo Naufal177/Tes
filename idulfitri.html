@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Idul Fitri</title>
+  <link rel="stylesheet" href="style-idulfitri.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Selamat Hari Raya Idul Fitri</h1>
+    <p id="countdown-eid"></p>
+    <img src="ketupat-lebaran.jpg" alt="Eid Lantern" class="lantern">
+    
+    <div class="input-group">
+      <!-- Kolom input dan tombol ucapan (terkunci sebelum Idul Fitri tiba) -->
+      <input type="text" id="nameInput" placeholder="Tunggu hingga Idul Fitri..." disabled>
+      <button id="greetBtn" disabled>Kirim Ucapan</button>
+      <p>Dibuat Oleh Naufal</p>
+    </div>
+    <p id="greeting"></p>
+
+    <!-- Tombol kembali ke halaman Ramadan -->
+    <button id="backBtn" onclick="window.location.href='index.html'">Kembali</button>
+  </div>
+
+  <script src="script-idulfitri.js"></script>
+</body>
+</html>

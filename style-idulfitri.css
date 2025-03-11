@@ -1,0 +1,132 @@
+/* Mengatur latar belakang bertema Ramadan untuk semua halaman */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url('lebaran.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+  color: white;
+}
+
+/* Efek transparan pada container agar teks lebih terbaca */
+.container {
+  background: rgba(0, 0, 0, 0.7); /* Transparansi hitam */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  max-width: 400px;
+  margin: auto;
+}
+
+img{
+  width: 230px;
+  height: 230px;
+}
+
+/* Animasi teks berkilau */
+.shine-text {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffd700, #ffffff, #ffd700);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Animasi fade-in untuk teks ucapan */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi lentera bergerak naik turun */
+.animate-lantern {
+  animation: floatLantern 4s ease-in-out infinite;
+}
+
+@keyframes floatLantern {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Pengaturan input dan tombol */
+.input-group {
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 80%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Desain tombol */
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Warna tombol utama */
+#greetBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+#greetBtn:hover {
+  background-color: #218838;
+}
+
+/* Tombol menuju Idul Fitri */
+#eidBtn {
+  background-color: #007bff;
+  color: white;
+}
+
+#eidBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Tombol kembali ke Ramadan */
+#backBtn {
+  background-color: #ffc107;
+  color: black;
+}
+
+#backBtn:hover {
+  background-color: #e0a800;
+}
+
+/* Efek tambahan untuk teks ucapan */
+#greeting {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
