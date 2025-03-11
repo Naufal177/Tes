@@ -8,17 +8,25 @@
 </head>
 <body>
   <div class="container">
-    <h1>Ramadan 2025</h1>
-    <p id="countdown"></p>
-    <img src="ramadan-lantern.jpg" alt="Ramadan Lantern" class="lantern">
-    
+    <h1 class="shine-text">Ramadan 2025</h1>
+    <p id="countdown" class="countdown"></p>
+    <img src="ramadan-lantern.png" alt="Ramadan Lantern" class="lantern animate-lantern">
+
     <div class="input-group">
-      <!-- Kolom input dan tombol aktif jika sudah waktunya berbuka -->
       <input type="text" id="nameInput" placeholder="Masukkan Nama Anda">
       <button id="greetBtn">Kirim Ucapan</button>
+      
     </div>
-    <p id="greeting"></p>
+    
+    <p id="greeting" class="fade-in"></p>
+
+    <!-- Tombol menuju Idul Fitri -->
+    <button id="eidBtn">
+      <a href="idulfitri.html">Idul Fitri</a>
+    </button>
+    <p>Dibuat Oleh Naufal</p>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
