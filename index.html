@@ -10,22 +10,25 @@
   <div class="container">
     <h1 class="shine-text">Ramadan 2025</h1>
     <p id="countdown" class="countdown"></p>
-    <img src="ramadan-lantern.jpg" alt="Ramadan Lantern" class="lantern animate-lantern">
+    <img src="ramadan-lantern.png" alt="Ramadan Lantern" class="lantern animate-lantern">
 
     <div class="input-group">
       <input type="text" id="nameInput" placeholder="Masukkan Nama Anda">
       <button id="greetBtn">Kirim Ucapan</button>
-      
     </div>
     
     <p id="greeting" class="fade-in"></p>
 
     <!-- Tombol menuju Idul Fitri -->
     <button id="eidBtn">
-      <a href="idulfitri.html">Idul Fitri</a>
+      <a href="idulfitri.html" style="text-decoration: none" class="color-font">Idul Fitri</a>
     </button>
+    
     <p>Dibuat Oleh Naufal</p>
   </div>
+
+  <!-- Audio Adzan -->
+  <audio id="adzanAudio" src="adzan.mp3"></audio>
 
   <script src="script.js"></script>
 </body>
