@@ -94,6 +94,10 @@ button {
   font-weight: bold;
 }
 
+.color-font {
+  color: white;
+}
+
 /* Warna tombol utama */
 #greetBtn {
   background-color: #28a745;
@@ -106,12 +110,13 @@ button {
 
 /* Tombol menuju Idul Fitri */
 #eidBtn {
-  background-color: #007bff;
+  background-color: #218838;
   color: white;
+  
 }
 
 #eidBtn:hover {
-  background-color: #0056b3;
+  background-color: #218838;
 }
 
 /* Tombol kembali ke Ramadan */
