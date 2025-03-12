@@ -23,6 +23,7 @@ img{
   height: 230px;
 }
 
+
 /* Animasi teks berkilau */
 .shine-text {
   font-size: 24px;
@@ -116,8 +117,8 @@ button {
 
 /* Tombol kembali ke Ramadan */
 #backBtn {
-  background-color: #ffc107;
-  color: black;
+  background-color: #28a745;
+  color: white;
 }
 
 #backBtn:hover {
@@ -129,4 +130,4 @@ button {
   font-weight: bold;
   font-size: 18px;
   margin-top: 10px;
-}
+} 
